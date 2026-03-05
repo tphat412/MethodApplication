@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{423ab863-8172-42f0-97df-8a00d9c4baab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{29464f1a-4b88-4463-8f1e-68de706d37fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{c2336eaa-ee4a-46a7-9e3c-3825bcde2fd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{d56270bd-33b3-466a-a178-0333fe129f68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{b00749c0-bbe2-4967-8fe3-8e564757e36d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Types">
+      <UniqueIdentifier>{ee84644b-0708-4ce7-b25e-311acd6dfdd9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodSelectionDlg.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="SubscriberIf.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="PublisherIf.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="PublisherBase.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodModel.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodApplicationDlg.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodOptionsLoader.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="MethodType.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodSelectionDlg.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodModel.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodApplicationDlg.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodOptionsLoader.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MethodApplication.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MethodApplication.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\MethodApplication.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
