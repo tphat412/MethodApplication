@@ -49,7 +49,7 @@ Responsibilities:
 
 ### View — Dialogs
 
-#### Main Dialog
+#### Method Application Dialog
 - Displays the currently selected Groundwater and Thermal methods
 - Contains buttons that open the reusable method selection dialog
 
