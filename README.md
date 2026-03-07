@@ -16,16 +16,16 @@ This application allows users to choose different methods across categories such
 User Interaction
        │
        ▼
-View (Dialogs)
+View (Dialogs) (Subscriber)
        │
        ▼
 Controller
        │
        ▼
-Model (Method Configuration)
+Multiple model (Publisher)
        │
        ▼
-Publisher → Subscriber notification → View updates
+Model (Publisher) → View (Subscriber) notification → View updates
 ```
 
 ### Model — `MethodModel`
@@ -45,7 +45,7 @@ Responsibilities:
 - Creating and managing models for each `MethodType`
 - Loading method options from resource files
 - Updating selected methods based on user input
-- Providing model data access to views
+- Providing model data to views
 
 ### View — Dialogs
 
