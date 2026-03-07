@@ -9,20 +9,16 @@
 class MethodController
 {
 public:
-
-    ~MethodController();
-
     void CreateModel(MethodType type);
 
-    PublisherIf* GetPublisher(MethodType type);
+    void AddSubscriber(MethodType type, SubscriberIf* subscriber);
 
-    const std::vector<std::string>& GetOptions(MethodType type);
+    const std::vector<std::string>& GetOptions(MethodType type) const;
 
-    std::string GetSelected(MethodType type);
+    const std::string& GetSelected(MethodType type) const;
 
     void SelectMethod(MethodType type, const std::string& method);
 
 private:
-
-    std::unordered_map<MethodType, MethodModel*> m_models;
+    std::unordered_map<MethodType, MethodModel> m_models;
 };

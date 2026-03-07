@@ -1,41 +1,34 @@
 #include "pch.h"
 #include "MethodController.h"
 #include "MethodOptionsLoader.h"
-
-MethodController::~MethodController()
-{
-    for (auto& pair : m_models)
-    {
-        delete pair.second;
-    }
-    m_models.clear();
-}
+#include <stdexcept>
 
 void MethodController::CreateModel(MethodType type)
 {
     if (m_models.find(type) != m_models.end())
         return;
 
-    m_models[type] = new MethodModel();
-    m_models[type]->SetOptions(MethodOptionsLoader::LoadOptions(MethodTypeToOptionsStringID(type)));
+    MethodModel model;
+    model.SetOptions(MethodOptionsLoader::LoadOptions(MethodTypeToOptionsStringID(type)));
+    m_models.emplace(type, model);
 }
 
-PublisherIf* MethodController::GetPublisher(MethodType type)
+void MethodController::AddSubscriber(MethodType type, SubscriberIf* subscriber)
 {
-    return m_models[type];
+    return m_models.at(type).AddSubscriber(subscriber);
 }
 
-const std::vector<std::string>& MethodController::GetOptions(MethodType type)
+const std::vector<std::string>& MethodController::GetOptions(MethodType type) const
 {
-    return m_models[type]->GetOptions();
+    return m_models.at(type).GetOptions();
 }
 
-std::string MethodController::GetSelected(MethodType type)
+const std::string& MethodController::GetSelected(MethodType type) const
 {
-    return m_models[type]->GetSelected();
+    return m_models.at(type).GetSelected();
 }
 
 void MethodController::SelectMethod(MethodType type, const std::string& method)
 {
-    m_models[type]->SetSelected(method);
+    m_models.at(type).SetSelected(method);
 }

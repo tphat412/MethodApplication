@@ -106,8 +106,8 @@ BOOL CMethodApplicationDlg::OnInitDialog()
 	// TODO: Add extra initialization here
 	m_controller.CreateModel(MethodType::GroundWater);
 	m_controller.CreateModel(MethodType::Thermal);
-	m_controller.GetPublisher(MethodType::GroundWater)->AddSubscriber(this);
-	m_controller.GetPublisher(MethodType::Thermal)->AddSubscriber(this);
+	m_controller.AddSubscriber(MethodType::GroundWater, this);
+	m_controller.AddSubscriber(MethodType::Thermal, this);
 	Update();
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
