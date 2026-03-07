@@ -33,28 +33,3 @@ const std::string& MethodModel::GetSelected() const
 {
     return m_selected;
 }
-
-void MethodModel::AddSubscriber(SubscriberIf* sub)
-{
-    auto it = std::find(m_subscribers.begin(), m_subscribers.end(), sub);
-
-    if (it == m_subscribers.end())
-    {
-        m_subscribers.push_back(sub);
-    }
-}
-
-void MethodModel::RemoveSubscriber(SubscriberIf* sub)
-{
-    m_subscribers.erase(
-        std::remove(m_subscribers.begin(),
-            m_subscribers.end(),
-            sub),
-        m_subscribers.end());
-}
-
-void MethodModel::Notify()
-{
-    for (auto subscriber : m_subscribers)
-        subscriber->Update();
-}

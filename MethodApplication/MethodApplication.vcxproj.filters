@@ -98,6 +98,9 @@
     <ClCompile Include="MethodOptionsLoader.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
+    <ClCompile Include="PublisherBase.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MethodApplication.rc">

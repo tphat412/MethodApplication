@@ -1,10 +1,10 @@
 #pragma once
 
-#include "PublisherIf.h"
+#include "PublisherBase.h"
 #include <vector>
 #include <string>
 
-class MethodModel : public PublisherIf
+class MethodModel : public PublisherBase
 {
 public:
 
@@ -16,15 +16,7 @@ public:
 
     const std::string& GetSelected() const;
 
-    void AddSubscriber(SubscriberIf* sub) override;
-
-    void RemoveSubscriber(SubscriberIf* sub) override;
-
-    void Notify() override;
-
 private:
-
     std::vector<std::string> m_options;
     std::string m_selected;
-    std::vector<SubscriberIf*> m_subscribers;
 };
