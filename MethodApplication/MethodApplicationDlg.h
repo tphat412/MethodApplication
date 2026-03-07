@@ -13,6 +13,8 @@ class CMethodApplicationDlg : public CDialogEx, public SubscriberIf
 public:
 	CMethodApplicationDlg(CWnd* pParent = nullptr);	// standard constructor
 
+	~CMethodApplicationDlg();
+
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_METHODAPPLICATION_DIALOG };

@@ -13,6 +13,8 @@ public:
 
     void AddSubscriber(MethodType type, SubscriberIf* subscriber);
 
+    void RemoveSubscriber(MethodType type, SubscriberIf* subscriber);
+
     const std::vector<std::string>& GetOptions(MethodType type) const;
 
     const std::string& GetSelected(MethodType type) const;

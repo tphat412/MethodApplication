@@ -57,6 +57,12 @@ CMethodApplicationDlg::CMethodApplicationDlg(CWnd* pParent /*=nullptr*/)
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
+CMethodApplicationDlg::~CMethodApplicationDlg()
+{
+	m_controller.RemoveSubscriber(MethodType::GroundWater, this);
+	m_controller.RemoveSubscriber(MethodType::Thermal, this);
+}
+
 void CMethodApplicationDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);

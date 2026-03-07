@@ -18,6 +18,11 @@ void MethodController::AddSubscriber(MethodType type, SubscriberIf* subscriber)
     return m_models.at(type).AddSubscriber(subscriber);
 }
 
+void MethodController::RemoveSubscriber(MethodType type, SubscriberIf* subscriber)
+{
+    return m_models.at(type).RemoveSubscriber(subscriber);
+}
+
 const std::vector<std::string>& MethodController::GetOptions(MethodType type) const
 {
     return m_models.at(type).GetOptions();
